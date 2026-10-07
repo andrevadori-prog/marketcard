@@ -1,0 +1,4 @@
+import type { Metadata } from 'next';import './globals.css';import { Navbar } from '@/components/navbar';import { Footer } from '@/components/footer';import { getPublicSiteUrl } from '@/lib/site-url';
+const siteUrl = getPublicSiteUrl() ?? undefined;
+export const metadata:Metadata={metadataBase:siteUrl?new URL(siteUrl):undefined,title:{default:'PokéCards — Carte Pokémon da collezione',template:'%s | PokéCards'},description:'Carte Pokémon da collezione selezionate con cura. Scopri il catalogo e richiedi le tue preferite.',openGraph:{title:'PokéCards — Carte Pokémon da collezione',description:'Carte Pokémon selezionate con cura.',siteName:'PokéCards',locale:'it_IT',type:'website'}};
+export default function RootLayout({children}:{children:React.ReactNode}){return <html lang="it"><body><Navbar/>{children}<Footer/></body></html>}

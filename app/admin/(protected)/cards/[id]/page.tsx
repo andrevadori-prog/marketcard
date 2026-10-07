@@ -1,0 +1,2 @@
+import {notFound} from 'next/navigation';import {getCard} from '@/lib/queries/cards';import {CardAdminForm} from '@/components/card-admin-form';
+export default async function EditCard({params}:{params:Promise<{id:string}>}){const{id}=await params;const card=await getCard(id);if(!card)notFound();return <main><p className="text-xs font-semibold uppercase tracking-widest text-[#69836f]">Inventario</p><h1 className="mb-6 mt-2 text-3xl font-semibold">Modifica {card.name}</h1><CardAdminForm card={card}/></main>}

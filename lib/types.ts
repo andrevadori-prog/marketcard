@@ -1,0 +1,2 @@
+export type Card = { id:string; name:string; set_name:string; card_number:string; rarity:string; language:string; condition:string; price:number; quantity:number; description:string; image_url:string; status:'available'|'reserved'|'sold'; created_at:string };
+export type PurchaseRequest = { id:string; customer_name:string; customer_email:string; message:string|null; status:'new'|'contacted'|'completed'|'cancelled'; created_at:string; quantity:number; price:number; card_name:string };

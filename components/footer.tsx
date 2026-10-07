@@ -1,0 +1,2 @@
+import Link from 'next/link';
+export function Footer(){return <footer className="mt-24 border-t border-[#e7e9e5] bg-white"><div className="mx-auto flex max-w-7xl flex-col justify-between gap-5 px-5 py-8 text-sm text-[#697580] md:flex-row md:items-center md:px-8"><Link href="/" className="font-semibold text-[#1d2731]">PokéCards<span className="text-[#587b66]">.</span></Link><p>© {new Date().getFullYear()} PokéCards · Carte selezionate con cura</p><Link href="/contact" className="hover:text-[#587b66]">Contatti</Link></div></footer>}
